@@ -140,11 +140,11 @@ class CalendarExport
             {
                 $dtStart = $event->isAllDay() ?
                     $this->formatter->getFormattedDate($event->getStart()) : 
-                    $this->formatter->getFormattedDateTime($event->getStart());
+                    $this->formatter->getFormattedUTCDateTime($event->getStart());
 
                 $dtEnd   = $event->isAllDay() ?
                     $this->formatter->getFormattedDate($event->getEnd()) :
-                    $this->formatter->getFormattedDateTime($event->getEnd());
+                    $this->formatter->getFormattedUTCDateTime($event->getEnd());
 
                 $this->stream->addItem('BEGIN:VEVENT')
                     ->addItem('UID:'.$event->getUid())
