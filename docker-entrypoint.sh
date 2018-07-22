@@ -18,7 +18,7 @@ createAppSettings() {
     sed -i "s/url-to-easyappointments-directory/$APP_URL/g" $PROJECT_DIR/config.php
 
     echo '[Date]' > /usr/local/etc/php/php.ini
-    echo 'date.timezone = "$TZ"' >> /usr/local/etc/php/php.ini
+    echo "date.timezone = \"$TZ\"" >> /usr/local/etc/php/php.ini
 
     chown -R www-data $PROJECT_DIR
 }
