@@ -122,10 +122,10 @@ class Email {
         switch ($company['time_format'])
         {
             case 'military':
-                $timeFormat = 'H:i';
+                $timeFormat = 'H:i O';
                 break;
             case 'regular':
-                $timeFormat = 'g:i A';
+                $timeFormat = 'g:i A O';
                 break;
             default:
                 throw new \Exception('Invalid time_format value: ' . $company['time_format']);
@@ -226,10 +226,10 @@ class Email {
         switch ($company['time_format'])
         {
             case 'military':
-                $timeFormat = 'H:i';
+                $timeFormat = 'H:i O';
                 break;
             case 'regular':
-                $timeFormat = 'g:i A';
+                $timeFormat = 'g:i A O';
                 break;
             default:
                 throw new \Exception('Invalid time_format value: ' . $company['time_format']);
